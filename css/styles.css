@@ -235,3 +235,81 @@ pre::selection {
   color: #ffffff;
   background-color: #a6afe2;
 }
+
+ /*Блочная модель*/
+ .excerpt {
+  /* Устанавливает рамку */
+  border: 2px solid #2196F3;
+
+  /* Добавляет внутреннее поле */
+  padding: 15px;
+
+  /* Устанавливает внешние отступы */
+  margin: 20px;
+
+  /*Ширину можно задавать не только в px, em или rem, но и в процентах. В таком случае ширина блока будет рассчитана как процент от ширины родителя. */
+  width: 420px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.box {
+  border: 2px solid #f44336;
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+  box-sizing: content-box;
+}
+.box1 {
+  border: 2px solid #f44336;
+  width: 200px;
+  height: 300px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 40px;
+}
+
+/* Поле сверху 10px, справа 15px, снизу 20px, слева 25px */
+padding: 10px 15px 20px 25px;
+
+/* Задаём поле между рамкой и контентом элемента */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.box2 {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.box3 {
+  width: 400px;
+  border-radius: 20px;
+  /* Установит стили верхней рамки */
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: blue;
+
+  /* Установит стили правой рамки */
+  border-right-width: 5px;
+  border-right-style: dotted;
+  border-right-color: black;
+
+  /* Установит стили нинжней рамки */
+  border-bottom-width: 7px;
+  border-bottom-style: dashed;
+  border-bottom-color: palevioletred;
+
+  /* Установит стили левой рамки */
+  border-left-width: 9px;
+  border-left-style: dashed;
+  border-left-color: green;
+}
