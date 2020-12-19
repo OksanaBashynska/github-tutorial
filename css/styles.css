@@ -313,3 +313,64 @@ padding: 10px 15px 20px 25px;
   border-left-style: dashed;
   border-left-color: green;
 }
+
+.boxblock {
+  width: 280px;
+  height: 100px;
+}
+
+.indigo {
+  background-color: #3f51b5;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.amber {
+  background-color: #ffc107;
+}
+
+.textinline {
+  display: block;
+  background-color: tomato;
+  color: white;
+
+  /* ✅ Работает */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+
+  /* ❌ Никакого эффекта */
+  width: 100px;
+  height: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.link {
+  display: inline-block;
+  padding: 16px 32px;
+
+  border-radius: 3px;
+  background-color: teal;
+  color: white;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pane {
+  display: none;
+  padding: 8px;
+  border: 1px solid blue;
+  border-radius: 3px;
+}
+
+.is-active {
+  display: block;
+}
