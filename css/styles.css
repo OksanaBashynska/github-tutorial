@@ -374,3 +374,172 @@ padding: 10px 15px 20px 25px;
 .is-active {
   display: block;
 }
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #212121;
+}
+
+.tile-set {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.tile {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+.tile:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon {
+  display: inline-flex;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon.with-bg {
+  background-color: #ff9800;
+}
+
+.icon.with-icon {
+  background-image: url("https://www.flaticon.com/svg/static/icons/svg/614/614180.svg");
+}
+
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   font-family: sans-serif;
+   line-height: 1.5;
+   color: #2a2a2a;
+}
+
+.container {
+   max-width: 960px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.tile-set-dog {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-top: 40px;
+   margin-left: -40px;
+   margin-top: -40px;
+}
+
+.tile-dog {
+   position: relative;
+   margin-left: 40px;
+   margin-top: 40px;
+   height: 120px;
+   flex-basis: calc(100% / 2 - 40px);
+   border: 1px solid #2196f3;
+   border-radius: 4px;
+   background-color: #fff;
+
+   background-image: url("https://www.flaticon.com/svg/static/icons/svg/616/616408.svg");
+   background-size: 40px;
+}
+
+.tile-dog::before {
+   position: absolute;
+   top: -32px;
+   width: 100%;
+   content: "";
+   font-weight: 700;
+   font-size: 20px;
+   text-align: center;
+}
+
+.no-repeat {
+   background-repeat: no-repeat;
+}
+
+.no-repeat::before {
+   content: "no-repeat";
+}
+
+.repeat-x {
+   background-repeat: repeat-x;
+}
+
+.repeat-x::before {
+   content: "repeat-x";
+}
+
+.repeat-y {
+   background-repeat: repeat-y;
+}
+
+.repeat-y::before {
+   content: "repeat-y";
+}
+
+.repeat {
+   background-repeat: repeat;
+}
+
+.repeat::before {
+   content: "repeat";
+}
+
+
+body {
+  margin: 0;
+}
+
+.canvas {
+  max-width: 1000px;
+  height: 400px;
+  margin-top: 40px;
+
+  background-image: url("https://image.flaticon.com/icons/svg/2909/2909923.svg"),
+    url("https://image.flaticon.com/icons/svg/2847/2847383.svg"),
+    url("https://image.flaticon.com/icons/svg/2909/2909673.svg"), url('https://s.tcdn.co/e3a/876/e3a87689-707f-3495-b94a-8ee96e2538e5/39.png'),
+    url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg");
+
+  background-size: 80px, 100px, 150px, 130px, cover;
+  background-repeat: no-repeat;
+  background-position: top 120px right 130px, top 270px left 130px, center, 100px 60px,
+    center;
+}
+
+.box-option-content::before {
+  content: 'Это текст в ::before';
+  font-size: 40px;
+  color: orange;
+}
+
+.box-option-content::after {
+  content: 'Это текст в ::after';
+  font-size: 30px;
+  color: teal;
+}
