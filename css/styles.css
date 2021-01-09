@@ -543,3 +543,133 @@ body {
   font-size: 30px;
   color: teal;
 }
+
+.facebook-icon1 {
+  display: inline-flex;
+  width: 200px;
+  height: 200px;
+  background-image: url("https://image.flaticon.com/icons/svg/145/145802.svg");
+  background-size: contain;
+}
+
+.facebook-icon {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.facebook-icon:hover > .circle {
+  fill: #C97064;
+}
+.facebook-icon:hover > .letter {
+  fill: #f44336;
+}
+
+.circle {
+  fill: #3b5998;
+}
+
+.letter {
+  fill: #ffffff;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.base {
+  width: 480px;
+  margin: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.base > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 3px dashed #2196f3;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-set {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+.card {
+  margin: 20px 0 0 20px;
+  flex-basis: calc(100% / 2 - 20px);
+}
+
+.card,
+.base {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.card > .label,
+.base > .label {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.card > .label {
+  font-family: monospace;
+  letter-spacing: -0.05em;
+}
+
+.thumb {
+  position: relative;
+  height: 380px;
+  width: 100%;
+  border: 3px dashed #2196f3;
+}
+
+.thumb > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.card:nth-child(1) img {
+  object-fit: fill;
+}
+
+.card:nth-child(2) img {
+  object-fit: contain;
+}
+
+.card:nth-child(3) img {
+  object-fit: cover;
+}
+
+.card:nth-child(4) img {
+  object-fit: scale-down;
+}
+
+.card:nth-child(5) img {
+  object-fit: none;
+}
