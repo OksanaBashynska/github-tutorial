@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Студия</title>
+    <link rel="stylesheet" href="./css/gallery.css" />
+    <link rel="stylesheet" href="flexslider.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="jquery.flexslider.js"></script>
+  </head>
+  <body>
+    <section class="gallery">
+      <!--скрыть заголовок-->
+      <h2 class="gallery__title">Our Gallery</h2>
+      <picture>
+        <source
+          srcset="
+            ./images/team-section/team-igor-300.webp 1x,
+            ./images/team-section/team-igor-600.webp 2x
+          "
+          type="image/webp"
+        />
+        <img
+          srcset="
+            ./images/team-section/team-igor-300.jpg 1x,
+            ./images/team-section/team-igor-600.jpg 2x
+          "
+          src="./images/team-section/team-igor-600.jpg"
+          alt="Улыбающийся мужчина"
+          width="450"
+          class="team__image"
+        />
+      </picture>
+    </section>
+
+    <section class="reviews"></section>
+    <!--скрыть заголовок-->
+    <h2 class="gallery__title">Customer Reviews</h2>
+
+    <div class="cd-testimonials-wrapper cd-container">
+      <ul class="cd-testimonials">
+        <li>
+          <p>Отзыв</p>
+          <div class="cd-author">
+            <img src="img/avatar-1.jpg" alt="Author image" />
+            <ul class="cd-author-info">
+              <li>Имя</li>
+              <li>CEO, AmberCreative</li>
+            </ul>
+          </div>
+        </li>
+        <li><!-- ... --></li>
+        <li><!-- ... --></li>
+      </ul>
+      <a href="#0" class="cd-see-all">See all</a>
+    </div>
+
+    <div class="cd-testimonials-all">
+      <div class="cd-testimonials-all-wrapper">
+        <ul>
+          <li class="cd-testimonials-item">
+            <p>Отзыв</p>
+
+            <div class="cd-author">
+              <img src="img/avatar-1.jpg" alt="Author image" />
+              <ul class="cd-author-info">
+                <li>Имя</li>
+                <li>CEO, CompanyName</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="cd-testimonials-item"><!-- ... --></li>
+        </ul>
+      </div>
+
+      <a href="#0" class="close-btn">Закрыть</a>
+    </div>
+    <script src="js/slider.js"></script>
+  </body>
+</html>
