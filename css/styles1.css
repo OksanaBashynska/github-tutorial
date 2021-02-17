@@ -1,0 +1,867 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(48, 48, 51);
+  background-color: mintcream;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: #ffffff;}
+}
+/*В scss можем его вкладывать @media в его тег - body*/
+
+
+/*Псевдокласи*/
+
+.link {
+  color: rgb(17, 223, 51);
+}
+.link:hover {
+  color: tomato;
+}
+.link:active {
+  color: blue;
+}
+
+/*Таблиця + Псевдокласи*/
+
+.schedule-body > tr:hover {
+  background-color: tomato;
+  color: white;
+}
+
+.schedule {
+  border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+  padding: 8px;
+  border: 1px solid #248934;
+}
+
+/*Курсор*/
+.auto {
+  cursor: auto;
+}
+.default {
+  cursor: default;
+}
+.none {
+  cursor: none;
+}
+.context-menu {
+  cursor: context-menu;
+}
+.help {
+  cursor: help;
+}
+.pointer {
+  cursor: pointer;
+}
+.progress {
+  cursor: progress;
+}
+.wait {
+  cursor: wait;
+}
+.cell {
+  cursor: cell;
+}
+.crosshair {
+  cursor: crosshair;
+}
+.text0 {
+  cursor: text;
+}
+.vertical-text {
+  cursor: vertical-text;
+}
+.alias {
+  cursor: alias;
+}
+.copy {
+  cursor: copy;
+}
+.move {
+  cursor: move;
+}
+.no-drop {
+  cursor: no-drop;
+}
+.not-allowed {
+  cursor: not-allowed;
+}
+.all-scroll {
+  cursor: all-scroll;
+}
+.col-resize {
+  cursor: col-resize;
+}
+.row-resize {
+  cursor: row-resize;
+}
+.n-resize {
+  cursor: n-resize;
+}
+.e-resize {
+  cursor: e-resize;
+}
+.s-resize {
+  cursor: s-resize;
+}
+.w-resize {
+  cursor: w-resize;
+}
+.ns-resize {
+  cursor: ns-resize;
+}
+.ew-resize {
+  cursor: ew-resize;
+}
+.ne-resize {
+  cursor: ne-resize;
+}
+.nw-resize {
+  cursor: nw-resize;
+}
+.se-resize {
+  cursor: se-resize;
+}
+.sw-resize {
+  cursor: sw-resize;
+}
+.nesw-resize {
+  cursor: nesw-resize;
+}
+.nwse-resize {
+  cursor: nwse-resize;
+}
+
+
+
+.cursors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cursors > div {
+  flex: 150px;
+  padding: 10px 2px;
+  white-space: nowrap;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin: 0 5px 5px 0;
+}
+
+.cursors > div:hover {
+  background: #eee;
+}
+
+code {
+  display: inline-block;
+  background-color: #eee;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 32px;
+}
+
+/*Кольори, каскад стилів*/
+.text-color {
+  background-color: tomato;
+  color: white;
+}
+
+.rgba {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+.rgba {
+  color: blue;
+  background-color: orange;
+}
+
+.rgba {
+  color: teal;
+}
+
+.post-title {
+  color: green;
+}
+
+/* Специфичность - 0 0 1 1 */
+.post > h1 {
+  color: red;
+}
+
+/* Специфичность - 0 0 2 0 */
+.post > .post-title {
+  color: orange;
+}
+
+.post {
+  color: green;
+}
+/*текст лінки автом. не міняється. Щоб змінити його вик. inherit - копіює всі занчення родителя, currentColor - лише колір*/
+.post-link {
+  color: inherit;
+}
+
+/*Робота з текстом*/
+.title-letter-space {
+  font-size: 70px;
+  letter-spacing: 10px;
+  word-spacing: 55px;
+  text-shadow: 10px 10px 2px #61686d, 5px 5px 5px #000000;
+}
+.text-title {
+  text-transform: uppercase;
+  text-align: left;
+  text-indent: 100px;
+  white-space: break-spaces;
+}
+.text-title > span {
+  text-decoration: line-through;
+}
+
+.link-title {
+  text-decoration: none;
+}
+pre {
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: #2a2a2a;
+  font-size: 16px;
+  text-align: left;
+  text-indent: 30px;
+}
+
+pre::first-letter {
+  font-family: "Tahoma", serif;
+  font-size: 32px;
+  color: #f44336;
+}
+pre::selection {
+  color: #ffffff;
+  background-color: #a6afe2;
+}
+
+ /*Блочная модель*/
+ .excerpt {
+  /* Устанавливает рамку */
+  border: 2px solid #2196F3;
+
+  /* Добавляет внутреннее поле */
+  padding: 15px;
+
+  /* Устанавливает внешние отступы */
+  margin: 20px;
+
+  /*Ширину можно задавать не только в px, em или rem, но и в процентах. В таком случае ширина блока будет рассчитана как процент от ширины родителя. */
+  width: 420px;
+}
+
+.box {
+  border: 2px solid #f44336;
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+  box-sizing: content-box;
+}
+.box1 {
+  border: 2px solid #f44336;
+  width: 200px;
+  height: 300px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 40px;
+}
+
+/* Поле сверху 10px, справа 15px, снизу 20px, слева 25px */
+padding: 10px 15px 20px 25px;
+
+/* Задаём поле между рамкой и контентом элемента */
+
+
+.box2 {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.box3 {
+  width: 400px;
+  border-radius: 20px;
+  /* Установит стили верхней рамки */
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: blue;
+
+  /* Установит стили правой рамки */
+  border-right-width: 5px;
+  border-right-style: dotted;
+  border-right-color: black;
+
+  /* Установит стили нинжней рамки */
+  border-bottom-width: 7px;
+  border-bottom-style: dashed;
+  border-bottom-color: palevioletred;
+
+  /* Установит стили левой рамки */
+  border-left-width: 9px;
+  border-left-style: dashed;
+  border-left-color: green;
+}
+
+.boxblock {
+  width: 280px;
+  height: 100px;
+}
+
+.indigo {
+  background-color: #3f51b5;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.amber {
+  background-color: #ffc107;
+}
+
+.textinline {
+  display: block;
+  background-color: tomato;
+  color: white;
+
+  /* ✅ Работает */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+
+  /* ❌ Никакого эффекта */
+  width: 100px;
+  height: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.link {
+  display: inline-block;
+  padding: 16px 32px;
+
+  border-radius: 3px;
+  background-color: teal;
+  color: white;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pane {
+  display: none;
+  padding: 8px;
+  border: 1px solid blue;
+  border-radius: 3px;
+}
+
+.is-active {
+  display: block;
+}
+
+.tile-set {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.tile {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+.tile:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon {
+  display: inline-flex;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon.with-bg {
+  background-color: #ff9800;
+}
+
+.icon.with-icon {
+  background-image: url("https://www.flaticon.com/svg/static/icons/svg/614/614180.svg");
+}
+
+.container {
+   max-width: 960px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.tile-set-dog {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-top: 40px;
+   margin-left: -40px;
+   margin-top: -40px;
+}
+
+.tile-dog {
+   position: relative;
+   margin-left: 40px;
+   margin-top: 40px;
+   height: 120px;
+   flex-basis: calc(100% / 2 - 40px);
+   border: 1px solid #2196f3;
+   border-radius: 4px;
+   background-color: #fff;
+
+   background-image: url("https://www.flaticon.com/svg/static/icons/svg/616/616408.svg");
+   background-size: 40px;
+}
+
+.tile-dog::before {
+   position: absolute;
+   top: -32px;
+   width: 100%;
+   content: "";
+   font-weight: 700;
+   font-size: 20px;
+   text-align: center;
+}
+
+.no-repeat {
+   background-repeat: no-repeat;
+}
+
+.no-repeat::before {
+   content: "no-repeat";
+}
+
+.repeat-x {
+   background-repeat: repeat-x;
+}
+
+.repeat-x::before {
+   content: "repeat-x";
+}
+
+.repeat-y {
+   background-repeat: repeat-y;
+}
+
+.repeat-y::before {
+   content: "repeat-y";
+}
+
+.repeat {
+   background-repeat: repeat;
+}
+
+.repeat::before {
+   content: "repeat";
+}
+
+.canvas {
+  max-width: 1000px;
+  height: 400px;
+  margin-top: 40px;
+
+  background-image: url("https://image.flaticon.com/icons/svg/2909/2909923.svg"),
+    url("https://image.flaticon.com/icons/svg/2847/2847383.svg"),
+    url("https://image.flaticon.com/icons/svg/2909/2909673.svg"), url('https://s.tcdn.co/e3a/876/e3a87689-707f-3495-b94a-8ee96e2538e5/39.png'),
+    url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg");
+
+  background-size: 80px, 100px, 150px, 130px, cover;
+  background-repeat: no-repeat;
+  background-position: top 120px right 130px, top 270px left 130px, center, 100px 60px,
+    center;
+}
+
+.box-option-content::before {
+  content: 'Это текст в ::before';
+  font-size: 40px;
+  color: orange;
+}
+
+.box-option-content::after {
+  content: 'Это текст в ::after';
+  font-size: 30px;
+  color: teal;
+}
+
+.facebook-icon1 {
+  display: inline-flex;
+  width: 200px;
+  height: 200px;
+  background-image: url("https://image.flaticon.com/icons/svg/145/145802.svg");
+  background-size: contain;
+}
+
+.facebook-icon {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.facebook-icon:hover > .circle {
+  fill: #C97064;
+}
+.facebook-icon:hover > .letter {
+  fill: #f44336;
+}
+
+.circle {
+  fill: #3b5998;
+}
+
+.letter {
+  fill: #ffffff;
+}
+
+
+.base {
+  width: 480px;
+  margin: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.base > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 3px dashed #2196f3;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-set {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+.card {
+  margin: 20px 0 0 20px;
+  flex-basis: calc(100% / 2 - 20px);
+}
+
+.card,
+.base {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.card > .label,
+.base > .label {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.card > .label {
+  font-family: monospace;
+  letter-spacing: -0.05em;
+}
+
+.thumb {
+  position: relative;
+  height: 380px;
+  width: 100%;
+  border: 3px dashed #2196f3;
+}
+
+.thumb > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.card:nth-child(1) img {
+  object-fit: fill;
+}
+
+.card:nth-child(2) img {
+  object-fit: contain;
+}
+
+.card:nth-child(3) img {
+  object-fit: cover;
+}
+
+.card:nth-child(4) img {
+  object-fit: scale-down;
+}
+
+.card:nth-child(5) img {
+  object-fit: none;
+}
+
+
+/* Липкий элемент*/
+
+
+.section-sticky {
+  margin-bottom: 20px;
+}
+
+.section-sticky-title {
+  position: sticky;
+  top: -1px;
+
+  margin: 0;
+  padding: 16px;
+  background-color: #ccc;
+  text-align: center;
+
+  color: #2196F3;
+
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.section-sticky-text {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.section-sticky-title:nth-child(1) {
+  color: #fff;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+}
+
+.section-sticky-title:nth-child(2) {
+  background-image: repeating-linear-gradient(
+    to right,
+    #f6ba52,
+    #f6ba52 10px,
+    #ffd180 10px,
+    #ffd180 20px
+  );
+}
+
+.section-sticky-title:nth-child(3) {
+  color: #fff;
+  background-image: repeating-radial-gradient(
+    circle,
+    purple,
+    purple 10px,
+    #4b026f 10px,
+    #4b026f 20px
+  );
+}
+
+.section-sticky-title:nth-child(4)  {
+  color: #fff;
+  background-image: repeating-linear-gradient(
+    to right,
+    #ff8a00,
+    #ff8a00 10px,
+    #e52e71 10px,
+    #e52e71 20px
+    
+  );
+}
+
+
+/*Overflow*/
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.boxOverflow {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #bdbdbd;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+}
+
+.boxOverflow:hover .overlay {
+  transform: translatex(0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3f51b5;
+
+  transform: translatex(-100%);
+  transition: transform 500ms ease;
+}
+
+.overlay > p {
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.overlay code {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #2a2a2a;
+}
+
+
+/*Анимация*/
+.box-animation {
+  width: 100px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: tomato;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  /*  Задаём значения перехода  */
+  transition-property: background-color, transform;
+  transition-duration: 700ms;
+  transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-delay: 500ms;
+}
+
+/* При ховере меняем значения анимируемых свойств */
+.box-animation:hover {
+  background-color: teal;
+  transform: rotate(180deg);
+}
+
+
+/* Формы*/
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+/* {
+  box-sizing: border-box;
+}
+form {
+  width: 28rem;
+  margin: 1rem;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+}
+button {
+	display: block;
+	margin: 0 auto 1rem;
+}
+.select-custom {
+
+   1 - скрой стили по умолчанию 
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+
+   2 - задай размеры и положение 
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 1rem;
+  padding: .6em 1.4em .5em .8em;
+
+   оформи border 
+  border: 1px solid #aaa;
+  border-radius: .5em;
+
+  оформи текст 
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+
+  оформи тень от блока 
+  box-shadow: 0 1px 0 1px hsla(0, 0%, 0%, 0.04);
+
+  оформи фон и фоновое изображение 
+  background-repeat: no-repeat;
+  background-position: right .7rem top 50%, 0 0;
+  background-size: .65rem auto, 100%;
+  
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid'%3e%3cg%3e%3cpolygon points='0,0 16,0 8,16' fill='blue'/%3e%3c/g%3e%3c/svg%3e"),
+  linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  
+}
+
+*/
