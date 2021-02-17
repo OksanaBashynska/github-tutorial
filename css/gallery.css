@@ -1,72 +1,69 @@
-.flex-direction-nav li {
-  position: absolute;
-  height: 100%;
-  width: 40px;
-  top: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.flex-direction-nav li:first-child {
-  left: 0;
+body {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 255%;
 }
 
-.flex-direction-nav li:last-child {
-  right: 0;
-}
-
-.flex-direction-nav li a {
-  display: block;
-  height: 100%;
+.reviews__list {
   width: 100%;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-
-  transition: background-color 0.2s;
+  text-align: center;
+  padding: 0;
 }
 
-.flex-direction-nav li a::before,
-.flex-direction-nav li a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 2px;
-  height: 13px;
-  background-color: white;
+.oo {
+  background: #fafafa;
+  padding: 71px 50px 20px 50px;
 }
 
-.flex-direction-nav li a::before {
-  transform: translateY(-35px) rotate(45deg);
+p {
+  font: 12px/30px Arial;
+  background-image: -webkit-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 28px,
+    #e1e1e1 28px,
+    transparent 30px
+  );
+  background-image: -moz-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 28px,
+    #e1e1e1 28px,
+    transparent 30px
+  );
+  background-image: -ms-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 28px,
+    #e1e1e1 28px,
+    transparent 30px
+  );
+  background-image: -o-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 28px,
+    #e1e1e1 28px,
+    transparent 30px
+  );
+  background-image: repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 28px,
+    #e1e1e1 28px,
+    transparent 30px
+  );
 }
 
-.flex-direction-nav li a::after {
-  transform: translateY(-27px) rotate(-45deg);
-}
-
-.flex-direction-nav li:last-child a::before {
-  transform: translateY(-35px) rotate(-45deg);
-}
-
-.flex-direction-nav li:last-child a::after {
-  transform: translateY(-27px) rotate(45deg);
-}
-
-.cd-testimonials-all {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  z-index: 2;
-
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s 0s, visibility 0s 0.3s;
-}
-
-.cd-testimonials-all.is-visible {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s 0s, visibility 0s 0s;
-}
+/*.ii {
+  background-repeat: repeat-x;
+  background-position: center bottom -1px;
+  background-size: 100% 2px;
+  background-image: linear-gradient(to right, #e1e1e1, #e1e1e1);
+}*/
