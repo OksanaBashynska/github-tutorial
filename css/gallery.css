@@ -19,10 +19,107 @@ body {
   color: #000000;
 }
 
-.reviews__list {
+.gallery {
+  margin-bottom: 80px;
+}
+
+@media screen and (min-width: 760px) {
+  .gallery {
+    margin-bottom: 119px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery {
+    margin-bottom: 123px;
+  }
+}
+
+.gallery__image {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .reviews {
+    background-color: #fff5f6;
+  }
+}
+
+/* стили основного контейнера слайдера */
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* стили для обёртки, в которой заключены слайды */
+.slider__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* стили для контейнера слайдов */
+.slider__items {
+  display: flex;
   width: 100%;
   text-align: center;
   padding: 0;
+  transition: transform 0.6s ease;
+}
+
+/* стили для слайдов */
+.slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* стили для индикаторов */
+.slider__indicators {
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.slider__indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+
+.slider__indicators li.active {
+  background-color: #fff;
+  background-image: url(../images/home.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* для стилизации текущего слайдера */
+.img-fluid {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
 }
 
 .reviews__photo {
@@ -30,69 +127,6 @@ body {
   width: 85px;
   height: 85px;
   border-radius: 50%;
-}
-
-.inner-testimonial > img {
-  max-width: 128px;
-  margin: 0 auto 15px;
-  opacity: 0;
-  -webkit-transition: all 1.3s linear;
-  transition: all 1.3s linear;
-}
-
-.owl-item.active .inner-testimonial > img {
-  -webkit-transition: all 1.3s linear;
-  transition: all 1.3s linear;
-}
-
-.owl-item.active .inner-testimonial > img.full-opacity {
-  opacity: 1;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  width: 14px;
-  height: 14px;
-}
-
-.owl-theme .owl-dots .owl-dot.active span {
-  width: 18px;
-  height: 18px;
-}
-
-/*Стрелки*/
-.owl-my-nav {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.owl-my-nav .owl-prev,
-.owl-my-nav .owl-next {
-  position: absolute;
-  width: 60px;
-  top: 34%;
-  font-size: 100px;
-  z-index: 20;
-  cursor: pointer;
-  opacity: 0.5;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.owl-my-nav .owl-prev:hover,
-.owl-my-nav .owl-next:hover {
-  opacity: 0.8;
-}
-
-.owl-my-nav .owl-prev {
-  left: 50px;
-}
-
-.owl-my-nav .owl-next {
-  right: 50px;
-  text-align: right;
 }
 
 .reviews__text--container {
@@ -158,24 +192,16 @@ body {
 .reviews__city {
   position: relative;
   margin-bottom: 128px;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .reviews__city::before {
   position: absolute;
-  top: -22px;
+  top: -25px;
   left: 47%;
   transform: translateY(-47%);
-  content: ". . . ";
+  content: ". . .";
   font-size: 30px;
   color: #c7133e;
-}
-
-.reviews__city::after {
-  position: absolute;
-  top: 65px;
-  left: 50%;
-  transform: translateY(-50%);
-  content: "\25CF  \25CF  \25CF";
-  font-size: 35px;
-  color: #d9d9d9;
 }
